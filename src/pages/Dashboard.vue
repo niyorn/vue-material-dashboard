@@ -21,11 +21,6 @@ import {
 
 export default {
   components: {
-    StatsCard,
-    ChartCard,
-    NavTabsCard,
-    NavTabsTable,
-    OrderedTable,
   },
   data() {
     return {
