@@ -1,16 +1,32 @@
 <template>
   <div class="content">
-      <div>
+      <div style="margin-bottom: 1rem">
+          <span>local url: </span>
+          <input
+              type="text"
+              v-model.trim.lazy="localUrl"
+              placeholder="Project ID"
+          >
+
+          <span>  -  </span>
+
           <span>project-id: </span>
 
           <input
-                  type="number"
-                  v-model.trim.lazy.number="projectId"
-                  placeholder="Project ID"
+              type="number"
+              v-model.trim.lazy.number="projectId"
+              placeholder="Project ID"
           >
+
+          <span>  -  </span>
+
+          <span>Constructed Iframe url: </span>
+          <span>
+              <strong>{{localUrl+'/extern/advies?project-id='+projectId}}</strong>
+          </span>
       </div>
 
-    <iframe :src="'https://adpi.local.adpi.cloud/extern/advies?project-id='+projectId"
+    <iframe :src="localUrl+'/extern/advies?project-id='+projectId"
       frameborder="0"
       width="100%"
       height="100%"
@@ -34,6 +50,7 @@ export default {
   },
   data() {
     return {
+        localUrl: 'https://adpi.local.adpi.cloud',
         projectId: 7
     };
   },
