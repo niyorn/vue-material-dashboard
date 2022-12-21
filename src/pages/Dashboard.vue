@@ -1,10 +1,10 @@
 <template>
   <div class="content">
-    <iframe src="https://adpi.local.adpi.cloud/extern/advies" 
+    <iframe src="https://adpi.local.adpi.cloud/extern/advies?project-id=3"
       frameborder="0"
       width="100%"
       height="100%"
-      style="overflow:hidden;height:80vh;width:100%"
+      style="overflow:hidden;height:87vh;width:100%"
       >
     </iframe>
   </div>
