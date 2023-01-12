@@ -18,13 +18,14 @@
         </iframe>
 
         <div
-                class="sidebar"
+                class="side-bar"
         >
             <span>local url: </span>
             <input
                     v-model.trim.lazy="sidebarUrl"
                     placeholder="Sidebar url"
                     type="text"
+                    style="width: 100%"
             >
 
             <iframe :src="sidebarUrl"
@@ -52,9 +53,17 @@
 </script>
 
 <style lang="scss" scoped>
-    .sidebar {
-      display: flex;
+    .side-bar {
+      margin-top: 4rem;
+
       flex: 0 0 33.33333333%;
       max-width: 33.33333333%;
+      margin-left: auto;
+    }
+
+    .content {
+      input {
+        width: 100%;
+      }
     }
 </style>
