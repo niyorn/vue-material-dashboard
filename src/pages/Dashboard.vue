@@ -39,6 +39,29 @@
             >
             </iframe>
         </div>
+
+        <div
+                style="margin-top: 2rem"
+        >
+            <div
+                    style="margin-bottom: 1rem"
+            >
+                <span>local url: </span>
+                <input
+                        v-model.trim.lazy="customerProfileUrl"
+                        placeholder="Sidebar url"
+                        type="text"
+                        style="width: 100%"
+                >
+            </div>
+
+            <iframe :src="customerProfileUrl"
+                    frameborder="0"
+                    style="overflow:hidden;height:87vh;width:100%"
+                    width="100%"
+            >
+            </iframe>
+        </div>
     </div>
 </template>
 
@@ -49,7 +72,8 @@
         data() {
             return {
                 localUrl: 'https://adpi.local.adpi.cloud/extern/advies?project-id=7',
-                sidebarUrl: 'https://adpi.local.adpi.cloud/extern/klant-documenten/verwerk?project-id=7'
+                sidebarUrl: 'https://adpi.local.adpi.cloud/extern/klant-documenten/verwerk?project-id=7',
+                customerProfileUrl: 'https://adpi.local.adpi.cloud/extern/klantomgeving/profiel'
             };
         },
     };
