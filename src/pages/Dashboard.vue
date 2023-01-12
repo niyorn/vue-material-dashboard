@@ -4,26 +4,9 @@
             <span>local url: </span>
             <input
                     v-model.trim.lazy="localUrl"
-                    placeholder="Project ID"
+                    placeholder="Advise url"
                     type="text"
             >
-
-            <span>  -  </span>
-
-            <span>project-id: </span>
-
-            <input
-                    v-model.trim.lazy.number="projectId"
-                    placeholder="Project ID"
-                    type="number"
-            >
-
-            <span>  -  </span>
-
-            <span>Constructed Iframe url: </span>
-            <span>
-              <strong>{{ localUrl + '/extern/advies?project-id=' + projectId }}</strong>
-          </span>
         </div>
 
         <iframe :src="localUrl+'/extern/advies?project-id='+projectId"
@@ -37,7 +20,14 @@
         <div
                 class="sidebar"
         >
-            <iframe :src="localUrl+'/extern/klant-documenten/verwerk?project-id='+projectId"
+            <span>local url: </span>
+            <input
+                    v-model.trim.lazy="sidebarUrl"
+                    placeholder="Sidebar url"
+                    type="text"
+            >
+
+            <iframe :src="sidebarUrl"
                     frameborder="0"
                     height="100%"
                     style="overflow:hidden;height:87vh;width:100%"
@@ -54,8 +44,8 @@
         components: {},
         data() {
             return {
-                localUrl: 'https://adpi.local.adpi.cloud',
-                projectId: 7
+                localUrl: 'https://adpi.local.adpi.cloud/extern/advies?project-id=7',
+                sidebarUrl: 'https://adpi.local.adpi.cloud/extern/klant-documenten/verwerk?project-id=7'
             };
         },
     };
