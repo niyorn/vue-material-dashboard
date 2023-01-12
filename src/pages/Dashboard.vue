@@ -1,44 +1,44 @@
 <template>
     <div class="content">
-        <div style="margin-bottom: 1rem">
-            <span>local url: </span>
-            <input
-                    v-model.trim.lazy="localUrl"
-                    placeholder="Advise url"
-                    type="text"
-            >
-        </div>
+<!--        <div style="margin-bottom: 1rem">-->
+<!--            <span>local url: </span>-->
+<!--            <input-->
+<!--                    v-model.trim.lazy="localUrl"-->
+<!--                    placeholder="Advise url"-->
+<!--                    type="text"-->
+<!--            >-->
+<!--        </div>-->
 
-        <iframe :src="localUrl"
-                frameborder="0"
-                height="100%"
-                style="overflow:hidden;height:87vh;width:100%"
-                width="100%"
-        >
-        </iframe>
+<!--        <iframe :src="localUrl"-->
+<!--                frameborder="0"-->
+<!--                height="100%"-->
+<!--                style="overflow:hidden;height:87vh;width:100%"-->
+<!--                width="100%"-->
+<!--        >-->
+<!--        </iframe>-->
 
-        <div
-            class="side-bar"
-        >
-            <div
-                style="margin-bottom: 1rem"
-            >
-                <span>local url: </span>
-                <input
-                        v-model.trim.lazy="sidebarUrl"
-                        placeholder="Sidebar url"
-                        type="text"
-                        style="width: 100%"
-                >
-            </div>
+<!--        <div-->
+<!--            class="side-bar"-->
+<!--        >-->
+<!--            <div-->
+<!--                style="margin-bottom: 1rem"-->
+<!--            >-->
+<!--                <span>local url: </span>-->
+<!--                <input-->
+<!--                        v-model.trim.lazy="sidebarUrl"-->
+<!--                        placeholder="Sidebar url"-->
+<!--                        type="text"-->
+<!--                        style="width: 100%"-->
+<!--                >-->
+<!--            </div>-->
 
-            <iframe :src="sidebarUrl"
-                    frameborder="0"
-                    style="overflow:hidden;height:87vh;width:100%"
-                    width="100%"
-            >
-            </iframe>
-        </div>
+<!--            <iframe :src="sidebarUrl"-->
+<!--                    frameborder="0"-->
+<!--                    style="overflow:hidden;height:87vh;width:100%"-->
+<!--                    width="100%"-->
+<!--            >-->
+<!--            </iframe>-->
+<!--        </div>-->
 
         <div
                 style="margin-top: 2rem"
