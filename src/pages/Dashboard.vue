@@ -18,15 +18,19 @@
         </iframe>
 
         <div
-                class="side-bar"
+            class="side-bar"
         >
-            <span>local url: </span>
-            <input
-                    v-model.trim.lazy="sidebarUrl"
-                    placeholder="Sidebar url"
-                    type="text"
-                    style="width: 100%"
+            <div
+                style="margin-bottom: 1rem"
             >
+                <span>local url: </span>
+                <input
+                        v-model.trim.lazy="sidebarUrl"
+                        placeholder="Sidebar url"
+                        type="text"
+                        style="width: 100%"
+                >
+            </div>
 
             <iframe :src="sidebarUrl"
                     frameborder="0"
