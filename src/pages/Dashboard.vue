@@ -37,7 +37,7 @@
         <div
                 class="sidebar"
         >
-            <iframe :src="localUrl+'//extern/klant-documenten/verwerk?project-id='+projectId"
+            <iframe :src="localUrl+'/extern/klant-documenten/verwerk?project-id='+projectId"
                     frameborder="0"
                     height="100%"
                     style="overflow:hidden;height:87vh;width:100%"
