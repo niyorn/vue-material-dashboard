@@ -9,7 +9,7 @@
             >
         </div>
 
-        <iframe :src="localUrl+'/extern/advies?project-id='+projectId"
+        <iframe :src="localUrl"
                 frameborder="0"
                 height="100%"
                 style="overflow:hidden;height:87vh;width:100%"
