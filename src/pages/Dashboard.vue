@@ -34,7 +34,6 @@
 
             <iframe :src="sidebarUrl"
                     frameborder="0"
-                    height="100%"
                     style="overflow:hidden;height:87vh;width:100%"
                     width="100%"
             >
