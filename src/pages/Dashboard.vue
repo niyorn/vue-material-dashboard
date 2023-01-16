@@ -69,6 +69,21 @@
 <script>
     export default {
         components: {},
+
+        mounted() {
+            window.addEventListener('message', (event) => {
+                if(event.data === 'toHome') {
+                    window.alert('triggert from parent')
+                    console.log(event.data);
+                   // Handle event
+                }
+            });
+
+            return{
+
+            }
+        },
+
         data() {
             return {
                 localUrl: 'https://adpi.local.adpi.cloud/extern/advies?project-id=7',
