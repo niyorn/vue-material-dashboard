@@ -1,72 +1,72 @@
 <template>
     <div class="content">
-<!--        <div style="margin-bottom: 1rem">-->
-<!--            <span>local url: </span>-->
-<!--            <input-->
-<!--                    v-model.trim.lazy="localUrl"-->
-<!--                    placeholder="Advise url"-->
-<!--                    type="text"-->
-<!--            >-->
-<!--        </div>-->
+        <div style="margin-bottom: 1rem">
+            <span>local url: </span>
+            <input
+                    v-model.trim.lazy="localUrl"
+                    placeholder="Advise url"
+                    type="text"
+            >
+        </div>
 
-<!--        <iframe :src="localUrl"-->
-<!--                frameborder="0"-->
-<!--                height="100%"-->
-<!--                style="overflow:hidden;height:87vh;width:100%"-->
-<!--                width="100%"-->
-<!--        >-->
-<!--        </iframe>-->
-
-<!--        <div-->
-<!--            class="side-bar"-->
-<!--        >-->
-<!--            <div-->
-<!--                style="margin-bottom: 1rem"-->
-<!--            >-->
-<!--                <span>local url: </span>-->
-<!--                <input-->
-<!--                        v-model.trim.lazy="sidebarUrl"-->
-<!--                        placeholder="Sidebar url"-->
-<!--                        type="text"-->
-<!--                        style="width: 100%"-->
-<!--                >-->
-<!--            </div>-->
-
-<!--            <iframe :src="sidebarUrl"-->
-<!--                    frameborder="0"-->
-<!--                    style="overflow:hidden;height:87vh;width:100%"-->
-<!--                    width="100%"-->
-<!--            >-->
-<!--            </iframe>-->
-<!--        </div>-->
+        <iframe :src="localUrl"
+                frameborder="0"
+                height="100%"
+                style="overflow:hidden;height:87vh;width:100%"
+                width="100%"
+        >
+        </iframe>
 
         <div
-                style="margin-top: 2rem"
+            class="side-bar"
         >
             <div
-                    style="margin-bottom: 1rem"
+                style="margin-bottom: 1rem"
             >
                 <span>local url: </span>
                 <input
-                        v-model.trim.lazy="customerProfileUrl"
+                        v-model.trim.lazy="sidebarUrl"
                         placeholder="Sidebar url"
                         type="text"
                         style="width: 100%"
                 >
             </div>
 
-            <iframe :src="customerProfileUrl"
+            <iframe :src="sidebarUrl"
                     frameborder="0"
                     style="overflow:hidden;height:87vh;width:100%"
                     width="100%"
             >
             </iframe>
         </div>
+
+
+<!--        <div-->
+<!--                style="margin-top: 2rem"-->
+<!--        >-->
+<!--            <div-->
+<!--                    style="margin-bottom: 1rem"-->
+<!--            >-->
+<!--                <span>local url: </span>-->
+<!--                <input-->
+<!--                        v-model.trim.lazy="customerProfileUrl"-->
+<!--                        placeholder="Sidebar url"-->
+<!--                        type="text"-->
+<!--                        style="width: 100%"-->
+<!--                >-->
+<!--            </div>-->
+
+<!--            <iframe :src="customerProfileUrl"-->
+<!--                    frameborder="0"-->
+<!--                    style="overflow:hidden;height:87vh;width:100%"-->
+<!--                    width="100%"-->
+<!--            >-->
+<!--            </iframe>-->
+<!--        </div>-->
     </div>
 </template>
 
 <script>
-
     export default {
         components: {},
         data() {
