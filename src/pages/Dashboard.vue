@@ -9,7 +9,12 @@
             >
         </div>
 
-        <button @click="navigateIframe">Test navigation</button>
+        <button 
+            @click="navigateIframe"
+            class="button"
+        >
+            naar Overlijden
+        </button>
 
         <iframe 
             :src="localUrl"
@@ -128,5 +133,12 @@
       input {
         width: 100%;
       }
+    }
+
+    .button {
+        padding: 0.5rem;
+        background-color: rgb(12, 12, 81);
+        color: white;
+        margin-bottom: 1rem;
     }
 </style>
