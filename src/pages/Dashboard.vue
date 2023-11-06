@@ -9,11 +9,15 @@
             >
         </div>
 
-        <iframe :src="localUrl"
-                frameborder="0"
-                height="100%"
-                style="overflow:hidden;height:87vh;width:100%"
-                width="100%"
+        <button @click="navigateIframe">Test navigation</button>
+
+        <iframe 
+            :src="localUrl"
+            ref="adviesIframe"
+            height="100%"
+            style="overflow:hidden;height:87vh;width:100%"
+            width="100%"
+            frameborder="0"
         >
         </iframe>
 
@@ -91,6 +95,20 @@
                 customerProfileUrl: 'https://adpi.local.adpi.cloud/extern/klantomgeving/profiel'
             };
         },
+
+        methods: {
+            navigateIframe() {
+                const iframe = this.$refs.adviesIframe;
+                const iframeWindow = iframe.contentWindow;
+
+                const message = {
+                    type: 'navigate',
+                    url: '/kantooromgeving/projecten/7/advies/risicos/overlijden'
+                };
+
+                iframeWindow.postMessage(message, '*');
+            }
+        }
     };
 </script>
 
