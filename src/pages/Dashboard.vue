@@ -106,6 +106,9 @@
                     url: '/kantooromgeving/projecten/7/advies/risicos/overlijden'
                 };
 
+                console.log(message);
+                iframe.postMessage(message, '*');
+
                 iframeWindow.postMessage(message, '*');
             }
         }
