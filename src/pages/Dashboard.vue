@@ -137,5 +137,9 @@
         background-color: rgb(12, 12, 81);
         color: white;
         margin-bottom: 1rem;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 </style>
