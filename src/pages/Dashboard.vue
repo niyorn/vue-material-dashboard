@@ -108,7 +108,8 @@
 
                 const message = {
                     type: 'navigate',
-                    url: '/kantooromgeving/projecten/7/advies/risicos/overlijden'
+                    name: 'employee.project.advice.risks.death',
+                    projectId: 7
                 };
             
                 iframeWindow.postMessage(message, '*');
