@@ -18,7 +18,7 @@
 
         <iframe 
             :src="localUrl"
-            ref="adviesIframe"
+            id="adviesIframe"
             height="100%"
             style="overflow:hidden;height:87vh;width:100%"
             width="100%"
@@ -103,16 +103,13 @@
 
         methods: {
             navigateIframe() {
-                const iframe = this.$refs.adviesIframe;
+                const iframe = document.querySelector('#adviesIframe');
                 const iframeWindow = iframe.contentWindow;
 
                 const message = {
                     type: 'navigate',
                     url: '/kantooromgeving/projecten/7/advies/risicos/overlijden'
                 };
-                
-                console.log(iframeWindow);
-                console.log(message);
             
                 iframeWindow.postMessage(message, '*');
             }
