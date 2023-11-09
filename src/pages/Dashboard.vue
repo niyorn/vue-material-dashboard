@@ -67,6 +67,13 @@ export default {
       }
     });
 
+    window.addEventListener('message', (event) => {
+      if (event.data.type === 'action') {
+        console.log(event.data.state)
+        console.log(event.data);
+        // Handle event
+      }
+    });
     return {
 
     }
@@ -86,6 +93,7 @@ export default {
       const iframe = document.querySelector('#adviesIframe');
       const iframeWindow = iframe.contentWindow;
 
+      console.log('asef')
       const message = {
         type: 'navigate',
         name: routeName,
@@ -97,6 +105,10 @@ export default {
   },
   computed: {
     adviceUrl() {
+      if (!this.apiToken) {
+        return `${this.localUrl}`;
+      }
+
       return `${this.localUrl}&token=${this.apiToken}`
     }
   },
