@@ -14,6 +14,10 @@
       naar Klantprofiel
     </button>
 
+    <button @click="navigateIframe('employee.projects.advice.comparisons')" class="button">
+      Naar vergelijken
+    </button>
+
     <iframe :src="adviceUrl" id="adviesIframe" height="100%" style="overflow:hidden;height:87vh;width:100%" width="100%"
       frameborder="0">
     </iframe>
