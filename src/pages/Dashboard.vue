@@ -14,9 +14,10 @@
             />
         </div>
         
-        <div style="display: flex; gap: 1rem">
+        <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
             <button
                 v-for="route in routes"
+                class="button"
                 @click="navigateIframe(route.name)"
             >
                 {{ route.text }}
