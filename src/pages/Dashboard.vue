@@ -14,26 +14,14 @@
             />
         </div>
         
-        <button
-            @click="navigateIframe('employee.project.advice.risks.death')"
-            class="button"
-        >
-            naar Overlijden
-        </button>
-        
-        <button
-            @click="navigateIframe('employee.projects.advice.customerprofile')"
-            class="button"
-        >
-            naar Klantprofiel
-        </button>
-        
-        <button
-            @click="navigateIframe('employee.projects.advice.comparisons')"
-            class="button"
-        >
-            Naar vergelijken
-        </button>
+        <div style="display: flex; gap: 1rem">
+            <button
+                v-for="route in routes"
+                @click="navigateIframe(route.name)"
+            >
+                {{ route.text }}
+            </button>
+        </div>
         
         <button @click="getApiToken()">
             Refresh token
@@ -137,6 +125,44 @@
                 customerProfileUrl: 'https://adpi.local.adpi.cloud/extern/klantomgeving/profiel',
                 apiToken: '',
                 height: '87vh',
+                routes: [
+                    {
+                        "name": "employee.project.advice.show",
+                        "text": "Inventarisatie"
+                    },
+                    {
+                        "name": "employee.projects.advice.customerprofile",
+                        "text": "Klantprofiel"
+                    },
+                    {
+                        "name": "employee.projects.advice.maxmortgage",
+                        "text": "Max"
+                    },
+                    {
+                        "name": "employee.projects.advice.financeplan",
+                        "text": "Financieringsopzet"
+                    },
+                    {
+                        "name": "employee.projects.advice.comparisons",
+                        "text": "Vergelijken"
+                    },
+                    {
+                        "name": "employee.projects.advice.proposals",
+                        "text": "Voorstellen"
+                    },
+                    {
+                        "name": "employee.project.advice.risks.death",
+                        "text": "Risico's"
+                    },
+                    {
+                        "name": "employee.projects.advice.reports",
+                        "text": "Rapportage"
+                    },
+                    {
+                        "name": "employee.projects.advice.applications",
+                        "text": "Aanvragen"
+                    }
+                ]
             };
         },
         
@@ -150,6 +176,7 @@
                 
                 try {
                     const { data } = await axios.request(options);
+                    console.log('data', data);
                     this.apiToken = data.token;
                     console.log(data);
                 } catch (error) {
