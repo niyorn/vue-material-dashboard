@@ -121,7 +121,7 @@
         
         data() {
             return {
-                localUrl: 'https://adpi.local.adpi.cloud/extern/advies?project-id=41',
+                localUrl: 'https://adpi.local.adpi.cloud/extern/advies?project-id=85',
                 sidebarUrl: 'https://adpi.local.adpi.cloud/extern/klant-documenten/verwerk?project-id=41',
                 customerProfileUrl: 'https://adpi.local.adpi.cloud/extern/klantomgeving/profiel',
                 apiToken: '',
@@ -134,6 +134,10 @@
                     {
                         "name": "employee.projects.advice.customerprofile",
                         "text": "Klantprofiel"
+                    },
+                    {
+                        "name": "employee.projects.advice.compare_mortgage_rate",
+                        "text": "Rentevergelijker"
                     },
                     {
                         "name": "employee.projects.advice.maxmortgage",
